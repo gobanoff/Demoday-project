@@ -39,12 +39,48 @@ if (isset($_GET['user'])) {
 }
 
 $userItemsJSON = json_encode($userItems);
-
 ?>
+
+
+
+
+
+
+
+
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $fname = $_POST['firstname'];
+    $lname = $_POST['lastname'];
+    $country = $_POST['country'];
+    $address = $_POST['address'];
+    $city = $_POST['city'];
+    $postcode = $_POST['postcode'];
+    $email = $_POST['email'];
+    $mobile = $_POST['mobile'];
+    $pay = $_POST['payment'];
+
+    if (
+        empty($fname) or empty($lname) or empty($country) or empty($address)
+        or empty($city) or empty($postcode) or empty($email) or empty($mobile) or empty($pay)
+    ) {
+        echo "<h1 style='color: red;'>Fill in all the fields </h1>";
+    } else {
+
+        $sql1 = "INSERT INTO `deliveryinfo` (firstname,lastname,country,address,city,postcode,email,mobile,payment_method) 
+    VALUES ('$fname', '$lname', '$country','$address', '$city','$postcode','$email','$mobile','$pay')";
+
+        if ($conn->query($sql1)) {
+            echo "<h3 style='color: lightgreen;margin-left:15px;'>You successfully complete delivery form !</br>Proceed with payment now</h3>";
+        }
+    }
+}
+?>
+
 <section class="form-signin w-100 m-auto">
     <a href="?page=userpage&user=<?php echo urlencode($user); ?>" class="btn btn-warning">Back to list</a>
 
-    <form action="?page=payment&user=<?php echo urlencode($user); ?>" method="post">
+    <form method="post">
 
         <h1 class="h3 mb-3 mt-3 "> Delivery form </h1>
 
@@ -99,7 +135,7 @@ $userItemsJSON = json_encode($userItems);
                 <label for="floatingInput">Payment Methods</label>
             </div>
 
-            <button id="done" class="btn btn-danger" type="submit"onclick="return confirm('Submit delivery form?');">Done</button>
+            <button id="done" class="btn btn-danger" type="submit">Done</button>
     </form>
 </section>
 <style>

@@ -193,9 +193,6 @@ session_start();
             case 'delete':
                 include './views/delete.php';
                 break;
-            case 'payment':
-                include './views/payment.php';
-                break;
             case 'inputitem':
                 include './views/inputitem.php';
                 break;

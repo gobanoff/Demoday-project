@@ -12,8 +12,9 @@ $cnt = $_GET['cnt'];
 $quan = $_GET['quantity'];
 $disc = $_GET['discount'];
 
- if (isset($_SESSION['loggedin']) and $_SESSION['loggedin']) {
-    $user = $_GET['user'];}
+if (isset($_SESSION['loggedin']) and $_SESSION['loggedin']) {
+    $user = $_GET['user'];
+}
 
 try {
     $pdo = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
@@ -191,14 +192,14 @@ if (isset($itemId)) {
         </form>
     </div>
 
-    
+
 
     <?php
     if (isset($_SESSION['loggedin']) and $_SESSION['loggedin']) : ?>
         <a href="?page=shopcart&user=<?php echo urlencode($user); ?>&item_id=<?php echo urlencode($itemId); ?>
          &title=<?php echo urlencode($title); ?>&price=<?php echo urlencode($price); ?>
          &image=<?php echo urlencode($image); ?>&discount=<?php echo urlencode($disc); ?>
-         &quantity=<?php echo urlencode($quan); ?>" class= "btn btn-secondary">Add to cart</a>
+         &quantity=<?php echo urlencode($quan); ?>" class="btn btn-secondary">Add to cart</a>
 
         <a href="?page=buy&user=<?php echo urlencode($user); ?> &title=<?php echo urlencode($title); ?>
         &price=<?php echo urlencode($price); ?>&image=<?php echo urlencode($image); ?> 
@@ -230,10 +231,10 @@ if (isset($itemId)) {
     <textarea name="myTextarea" placeholder="Item info :" cols="116" rows="20" minlength="10" maxlength="500" required><?php echo $info; ?> 
     </textarea>
     <?php if (isset($_SESSION['loggedin']) and $_SESSION['loggedin']) : ?>
-    <a href="?page=userpage&user=<?php echo urlencode($user); ?>" class="btn btn-warning">Back to list</a>
+        <a href="?page=userpage&user=<?php echo urlencode($user); ?>" class="btn btn-warning">Back to list</a>
     <?php else : ?>
         <a href="?page=homepage" class="btn btn-warning">Back to list</a>
-        <?php endif; ?>
+    <?php endif; ?>
 
 
 </body>
@@ -241,10 +242,10 @@ if (isset($itemId)) {
 </html>
 
 <script>
-function submitForm() {
-   
-    var searchValue = document.querySelector('input[name="search"]').value;
-    var url = '?page=userpage&user=<?php echo $user; ?>&search=' + encodeURIComponent(searchValue);
-    window.location.href = url;
-}
+    function submitForm() {
+
+        var searchValue = document.querySelector('input[name="search"]').value;
+        var url = '?page=userpage&user=<?php echo $user; ?>&search=' + encodeURIComponent(searchValue);
+        window.location.href = url;
+    }
 </script>
