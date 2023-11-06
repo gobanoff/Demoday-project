@@ -41,13 +41,6 @@ if (isset($_GET['user'])) {
 $userItemsJSON = json_encode($userItems);
 ?>
 
-
-
-
-
-
-
-
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $fname = $_POST['firstname'];
