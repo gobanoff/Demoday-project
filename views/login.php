@@ -80,8 +80,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     .btn-primary {
-        height: 60px;
-        font-size: 25px;
+        font-weight: 700;
+        height: 50px;
+        font-size: 22px;
     }
 
     h2 {

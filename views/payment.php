@@ -29,12 +29,7 @@ if (
 
 <?php
 $user = $_GET['user'];
-$image = $_GET['image'];
-$title = $_GET['title'];
-$itemId = $_GET['item_id'];
-$price = $_GET['price'];
-$quan = $_GET['quantity'];
-$disc = $_GET['discount'];
+
 
 try {
     $pdo = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
@@ -46,10 +41,7 @@ try {
 $user = $_GET['user'];
 ?>
 
-<a href="?page=buy&user=<?php echo $user; ?>&title=<?php echo urlencode($title); ?>
-        &price=<?php echo urlencode($price); ?>&image=<?php echo urlencode($image); ?> 
-        &item_id=<?php echo urlencode($itemId); ?>&discount=<?php echo urlencode($disc); ?>
-        &quantity=<?php echo urlencode($quan); ?>" class="btn btn-warning">Back to payment</a>
+<a href="?page=buy&user=<?php echo $user; ?>&executeScript=true" class="btn btn-warning">Back to payment</a>
 <style>
     .btn-warning {
         margin-bottom: 672px;

@@ -44,10 +44,7 @@ $userItemsJSON = json_encode($userItems);
 <section class="form-signin w-100 m-auto">
     <a href="?page=userpage&user=<?php echo urlencode($user); ?>" class="btn btn-warning">Back to list</a>
 
-    <form action="?page=payment&user=<?php echo urlencode($user); ?>&title=<?php echo urlencode($title); ?>
-                 &price=<?php echo urlencode($price); ?>&image=<?php echo urlencode($image); ?> 
-                 &item_id=<?php echo urlencode($itemId); ?>&discount=<?php echo urlencode($disc); ?>
-                 &quantity=<?php echo urlencode($quan); ?>" method="post">
+    <form action="?page=payment&user=<?php echo urlencode($user); ?>" method="post">
 
         <h1 class="h3 mb-3 mt-3 "> Delivery form </h1>
 
@@ -102,7 +99,7 @@ $userItemsJSON = json_encode($userItems);
                 <label for="floatingInput">Payment Methods</label>
             </div>
 
-            <button id="done" class="btn btn-danger" type="submit" onclick="return confirm('Submit delivery form?');">Done</button>
+            <button id="done" class="btn btn-danger" type="submit"onclick="return confirm('Submit delivery form?');">Done</button>
     </form>
 </section>
 <style>
