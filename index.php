@@ -43,6 +43,31 @@ session_start();
             font-weight: 800;
         }
 
+        @media (max-width: 1450px) {
+            .logo img {
+                width: 80px;
+                height: 80px;
+
+                border-radius: 50px;
+            }
+
+            .logo {
+                width: 80px;
+                height: 80px;
+                position: absolute;
+                border-radius: 40px;
+                top: 20px;
+                left: 50px;
+            }
+
+            .logo p {
+                color: red;
+                font-size: 12px;
+                padding-left: 15px;
+                font-weight: 800;
+            }
+        }
+
         @media (max-width: 1030px) {
 
             .container {
@@ -71,7 +96,6 @@ session_start();
                 padding-left: 15px;
                 font-weight: 800;
             }
-
         }
 
         @media (max-width: 820px) {

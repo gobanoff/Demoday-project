@@ -216,6 +216,41 @@
             color: black;
         }
 
+        @media (max-width: 1450px) {
+
+            #nav1 {
+                display: none;
+            }
+
+            .btn-primary {
+
+
+                margin-left: 100px;
+            }
+
+            .drop:hover #nav1 {
+                width: 200px;
+                display: block;
+                position: absolute;
+                background-color: white;
+                left: 60px;
+                top: 300px;
+            }
+
+            .nav-btn {
+                padding-inline: 10px;
+                border: none;
+                background-color: blue;
+                color: white;
+                font-size: 2em;
+                display: block;
+                cursor: pointer;
+                border-radius: 10px;
+                margin-top: 20px;
+            }
+
+        }
+
         @media (max-width: 1030px) {
 
             .sch {

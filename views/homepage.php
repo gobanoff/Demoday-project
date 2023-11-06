@@ -128,6 +128,8 @@ $totalPages = ceil($totalItems / $itemsPerPage);
 			text-decoration: none;
 		}
 
+
+
 		@media (max-width: 1030px) {
 			h4 {
 				font-size: 18px;
@@ -135,14 +137,11 @@ $totalPages = ceil($totalItems / $itemsPerPage);
 
 			.tuve {
 				width: 900px;
-
 				padding-top: 100px;
 				grid-template-columns: repeat(3, 1fr);
 				grid-template-rows: repeat(4);
 				gap: 10px;
 			}
-
-
 
 			.image {
 				width: 100px;
@@ -165,7 +164,7 @@ $totalPages = ceil($totalItems / $itemsPerPage);
 
 			.tuve {
 				width: 768px;
-
+				padding-left: 40px;
 				padding-top: 100px;
 				grid-template-columns: 1fr 1fr 1fr;
 				grid-template-rows: repeat(4);
@@ -193,7 +192,7 @@ $totalPages = ceil($totalItems / $itemsPerPage);
 
 			.tuve {
 				width: 600px;
-
+				padding-left: 40px;
 				padding-top: 100px;
 				grid-template-columns: 1fr 1fr;
 				grid-template-rows: repeat(6);

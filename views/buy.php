@@ -64,7 +64,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     VALUES ('$fname', '$lname', '$country','$address', '$city','$postcode','$email','$mobile','$pay')";
 
         if ($conn->query($sql1)) {
-            echo "<h3 style='color: lightgreen;margin-left:15px;'>You successfully complete delivery form !</br>Proceed with payment now</h3>";
+            echo "<h3 style='color: rgb(71, 220, 34);margin-left:15px;'>You successfully complete delivery form !</br>Proceed with payment now</h3>";
         }
     }
 }
@@ -128,7 +128,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <label for="floatingInput">Payment Methods</label>
             </div>
 
-            <button id="done" class="btn btn-danger" type="submit">Done</button>
+            <button id="done" class="btn btn-danger" type="submit" onclick="return confirm('Submit delivery form?');">Done</button>
     </form>
 </section>
 <style>
@@ -690,7 +690,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <input type="hidden" name="user" value="<?php echo $user; ?>">
     <input type="hidden" name="iprice" value="<?php echo $price ?> ">
     <input type="hidden" name="delivery" id="delivery" value="">
-    <button type="submit" id="hide1" class="btn btn-success" onclick="return confirm('Submit your payment?');">Submit payment</button>
+    <button type="submit" id="hide1" class="btn btn-success">Submit payment</button>
 </form>
 <a href="?page=admin&user=<?php echo $user; ?>" class="btn btn-success" onclick="onSubmit(event)" id="hide8">Submit payment</a>
 
