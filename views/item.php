@@ -125,8 +125,9 @@ if (isset($itemId)) {
         }
 
         .butn img {
+            height: 40px;
             width: 100px;
-            height: 55px;
+
             margin-left: -18px;
             padding-bottom: 5px;
             border-radius: 5px;
@@ -180,6 +181,232 @@ if (isset($itemId)) {
 
         span {
             color: blue;
+        }
+
+
+        @media (max-width: 1030px) {
+
+            .sch {
+
+                width: 500px;
+
+            }
+
+            textarea {
+                width: 800px;
+                padding: 50px;
+                font-size: 22px;
+                border-radius: 16px;
+                margin-top: 40px;
+
+            }
+
+            .btn-secondary {
+
+                top: 410px;
+                right: 110px;
+
+            }
+
+            .btn-primary {
+
+                top: 330px;
+                right: 110px;
+
+            }
+
+            .prc1 {
+
+                position: absolute;
+                top: 180px;
+                right: 300px;
+                font-size: 25px;
+                color: white;
+                font-weight: 700;
+                border-radius: 30px;
+
+            }
+
+            .prc {
+                position: absolute;
+                top: 250px;
+                right: 120px;
+                font-size: 40px;
+                color: red;
+                font-weight: 700;
+            }
+        }
+
+        @media (max-width: 820px) {
+
+            .prc1 {
+                top: 180px;
+                right: 160px;
+                font-size: 22px;
+                border-radius: 30px;
+
+            }
+
+            .prc {
+                position: absolute;
+                top: 230px;
+                right: 10px;
+                font-size: 35px;
+                color: red;
+                font-weight: 700;
+            }
+
+            .btn-secondary {
+                top: 410px;
+                right: 20px;
+            }
+
+            .btn-primary {
+                top: 320px;
+                right: 20px;
+            }
+
+            .sch {
+
+                width: 400px;
+
+            }
+        }
+
+        @media (max-width: 600px) {
+
+            .prc1 {
+                top: 170px;
+                right: 60px;
+                font-size: 15px;
+            }
+
+            textarea {
+                margin-left: 40px;
+                height: 300px;
+                width: 500px;
+                padding: 50px;
+                font-size: 18px;
+                border-radius: 16px;
+                margin-top: 40px;
+            }
+
+            .btn-secondary {
+                top: 270px;
+                right: 2px;
+                height: 35px;
+                width: 100px;
+                font-size: 12px;
+            }
+
+            .btn-primary {
+                top: 220px;
+                right: 2px;
+                width: 100px;
+                height: 35px;
+                font-size: 12px;
+            }
+
+            h4 {
+                padding-left: 40px;
+            }
+
+            .btn-warning {
+                margin-left: 40px;
+            }
+
+            h5 {
+                padding-left: 40px;
+            }
+
+            h3 {
+                padding-left: 40px;
+            }
+
+            h1 {
+                padding-left: 40px;
+                font-size: 22px;
+            }
+
+            h2 {
+                padding-left: 40px;
+            }
+
+            .prc {
+                top: 120px;
+                left: 250px;
+                font-size: 25px;
+            }
+
+            .sch {
+                margin-left: 130px;
+                width: 300px;
+
+            }
+
+            .play {
+                margin-left: 40px;
+            }
+
+            img {
+                width: fit-content;
+                height: 150px;
+            }
+        }
+
+        @media (max-width: 420px) {
+            .prc {
+                top: 120px;
+                left: 400px;
+                font-size: 25px;
+            }
+
+            .prc1 {
+                width: 35px;
+                border-radius: 5px;
+                left: 320px;
+                border-radius: 10px;
+                font-size: 10px;
+            }
+
+            .butn img {
+                height: 45px;
+                width: 70px;
+
+                margin-left: -18px;
+                padding-bottom: 5px;
+                border-radius: 5px;
+            }
+
+            .sch {
+                margin-left: 130px;
+                width: 300px;
+                height: 40px;
+                margin-top: 40px;
+                border-radius: 6px;
+                padding-left: 10px;
+            }
+
+            .btn-secondary {
+                top: 270px;
+                left: 400px;
+                height: 35px;
+                width: 100px;
+                font-size: 12px;
+            }
+
+            .btn-primary {
+                top: 220px;
+                left: 400px;
+                width: 100px;
+                height: 35px;
+                font-size: 12px;
+            }
+
+            img {
+                width: fit-content;
+                height: 150px;
+            }
         }
     </style>
 
