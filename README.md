@@ -19,9 +19,7 @@ The **Demoday Project** is a web-based application that allows users to submit a
 - **Version Control**: Git
 - **Deployment**: Hosted live at [gobanoff.great-site.net](http://gobanoff.great-site.net/index.php)
 
-## Project Structure
 
-/Demoday-project │ ├── /assets # CSS, JavaScript, images, and other frontend resources ├── /config # Database configuration files ├── /templates # Reusable HTML templates ├── /src # PHP source code (business logic, form handling, etc.) ├── /public # Public-facing files (index.php, forms, etc.) └── /database # SQL dump or scripts
 ## Installation
 
 To run this project locally, follow these steps:
